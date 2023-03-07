@@ -173,6 +173,10 @@ body {
         font-size: 1.5rem;
     }
 
+    .principal__links__navegacao{
+        width: 70%;
+    }
+
     .principal__conteudo__texto__14{
         font-size: 1.2rem;
     }
