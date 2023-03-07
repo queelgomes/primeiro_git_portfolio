@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{ /*root é onde vcocê armazena as variaveis. Assim quando voce alterar aqui, altera todo o codigo que a variavel for mencionada. Para chamar ela na propriedade, precisa colocar "var();" */
+    --cor-primaria: #000000;
+    --cor-segundaria:#f6f6f6;
+    --cor-terciaria:#22D4FD;
+    --cor-hover:#272727;
+    
+    --fonte-titulo: 'Krona One', sans-serif;
+    --fonte-texto:'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; Aqui colocamos que o conteúdo do body ocupará 100% da tela do navegador */
+    box-sizing: border-box;/* Aqui diz que as tags que forem criadas dentro do body, não podem sair da medida dele. Assim será possível ter mais controle do conteúde.*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-segundaria);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__links {
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+    font-size: 1.12rem; /* 1 rem é igual a 16px*/
+    text-decoration: none;
+}
+
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+
+.principal {
+    padding: 5% 15%;
+    display: flex; /*O Flexbox é utilizado para posicionar elementos na tela. Para ativa-lo, colocamos antes de dar as orientações >> display: flex; */
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.principal__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column; /* Por padrão o flexbox alinha na horizontal. Por isso que precisa informar que quer em coluna/vertical*/
+    gap: 40px; /*Aqui é a distancia entre os itens*/
+}
+
+.principal__conteudo__titulo {
+    font-size: 1,88rem;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    line-height: 2.5rem;
+
+}
+
+.principal__conteudo__texto {
+    font-size: 1.12rem;
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+}
+
+.principal__conteudo__texto__14 {
+    font-size: 0.88rem;
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+}
+
+.principal__conteudo__listas {
+    font-size: 0.88rem;
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    margin: 0px 0px 0px 40px;
+}
+
+
+.clique_aqui:hover {
+    color:var(--cor-terciaria);
+}
+.principal__links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.principal__links__subtitulo {
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+    font-size: 1.12rem;
+}
+
+.principal__links__navegacao {
+    width: 50%;
+    padding: 10px 0;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.12rem;
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+    text-decoration: none; /*Tirar aquele sublinhado e cor padrao do navegador*/
+    color: var(--cor-segundaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.principal__links__link:hover { /*Quando você quer que mude algo ao passar o mouse por cima, você deve criar a class e acrescentar :hover, assim já será identificado que essas alterações vao ocorrer quando o mouse estiver por cima. */
+    background-color: var(--cor-terciaria);
+
+}
+
+.principal__imagem{
+    width: 50%;
+}
+.rodape {
+    background-color: var(--cor-terciaria);
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--cor-primaria);
+    text-align: center;
+    padding: 24px;
+    width: 100%;
+}
+
+@media (max-width: 1200px){ /*Media Querie possibilita que essas funcoes so ocorram se oq estiver entre parentes for verdadeiro. Entao se a tela tiver no maximo 1200px vai realizar oq esta aqui abaixo. Se nao ira fazer o que ja tinha definido. Para colocar mais de uma media querie, vc pode colocar, por exemplo para tablet: @media (min-width: 480px ) and (max-width: 800px) e depois um @media para a largura da tela de celular. Assim vc tera mais responsividade.*/
+    body{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .principal{
+        flex-direction: column-reverse;
+        padding: 10%;
+    }
+
+    .principal__conteudo{
+        width: auto; /*Nao podemos colocar o valor 0 no width. Entao colocamos 'auto'que diz para ele ocupar todo o espaco que tem disponivel*/
+    }
+
+    .principal__conteudo__titulo{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .principal__conteudo__texto{
+        font-size: 1.5rem;
+    }
+
+    .principal__conteudo__texto__14{
+        font-size: 1.2rem;
+    }
+
+    .principal__conteudo__listas{
+        font-size: 1.2rem;
+    }
+
+    .principal__imagem{
+        width: auto;
+    }
+}

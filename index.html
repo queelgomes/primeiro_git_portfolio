@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!--linguagem que estamos desenvolvendo o código-->
+<head>
+    <meta charset="UTF-8"> <!--esse é o tipo de teclado que queremos. O UTF-8 é o mais utilizado, onde usa 8 bitz para cada caractere-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Informação importante para que usa o navegador Edge-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Aqui o navegador faz uma scala proporcional a tela do usuário. Viewport é a área visivel de um plano.-->
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="cabecalho"><!--header em português é cabeçalho-->
+        <nav class="cabecalho__menu"><!-- Nav é o código que indica um menu com abas-->
+            <a class="cabecalho__menu__links" href="index.html">Home</a>
+            <a class="cabecalho__menu__links" href="about.html">Sobre mim</a>
+            <a class="cabecalho__menu__links" href="curriculo.html">Currículo</a>
+        </nav>
+    </header>
+
+    <main class="principal"><!--main em português é principal. É a tag mãe-->
+        <section class="principal__conteudo"><!--A section é usada como uma secao filho dentro da mãe. É usada para dividir varios elementos-->
+            <h1 class="principal__conteudo__titulo">
+                Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade!</strong>
+            </h1>
+            <p class="principal__conteudo__texto">
+                Olá! Sou Queel Gomes, desenvolvedora Front-end com especialidade em React, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. <spain class="clique_aqui">Clique aqui para conversarmos.</spain>
+            </p>
+            <div class="principal__links"><!--A div é usada para dar algumas característica a poucos elementos. Nada muito grande como a main ou section-->
+                <h2 class="principal__links__subtitulo">
+                    Acesse minhas redes:
+                </h2>
+                <a class="principal__links__navegacao" href="https://www.instagram.com/queelgomes">
+                    <img src="./assets/instagram.png">
+                    Instagram
+                </a>
+                <a class="principal__links__navegacao" href="https://github.com/queelgomes">
+                    <img src="./assets/github.png">
+                    GitHub
+                </a>
+            </div>
+        </section>
+        <img class="principal__imagem" src="./assets/Imagem.png" alt="Imagem da Joana Programando">
+    </main>
+
+    <footer class="rodape">
+        • Desenvolvido por Queel Gomes •
+    </footer>
+</body>
+</html>
